@@ -12,5 +12,4 @@ apt-get -y install mysql-server >>/script_output.txt
 mysql --batch --silent -e CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 # Grant permissions to Wordpress DB to new wordpress user account
-mysql --batch --silent -e GRANT ALL ON wordpress.* TO 'wordpressuser'@'%' IDENTIFIED BY '{Passowrd}';
-mysql --batch --silent -e FLUSH PRIVILEGES;
+mysql --batch --silent -e GRANT ALL ON wordpress.* TO 'wordpressuser'@'%' IDENTIFIED BY '$CS_SQL_PASSWD';
