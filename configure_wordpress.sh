@@ -7,7 +7,7 @@ echo "Install Apache Web Server">>/script_output.txt
 apt-get -y install apache2 >>/script_output.txt
 
 
-PUBLIC_IP = "$(curl http://169.254.169.254/latest/meta-data/public-ipv4)"
+PUBLIC_IP="$(curl http://169.254.169.254/latest/meta-data/public-ipv4)"
 
 echo "Set server name in apache config">>/script_output.txt
 echo "ServerName $PUBLIC_IP" >>/etc/apache2/apache2.conf
